@@ -4,7 +4,7 @@ import Deno from 'https://deno.land/std@0.91.0/node/fs.ts'
  * @param data  Object
  * @param fileName xml fileName(string)
  */
-async function xmlGenerator(data: Object, fileName: string): Promise<void> {
+export async function xmlGenerator(data: Object, fileName: string): Promise<void> {
     try {
         const encoder = new TextEncoder();
         let ret = '<?xml version="1.0"?>'+'\n'+'<data>'+'\n'
@@ -55,5 +55,3 @@ function generateArrayItems(data: any[], depth: number): string {
     }
     return retStr
 }
-
-export default xmlGenerator

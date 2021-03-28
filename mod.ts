@@ -1,1 +1,3 @@
-export {default as xmlGenerator} from './src/index'
+import xmlGenerator from "./src"
+
+export {xmlGenerator} from './src'
